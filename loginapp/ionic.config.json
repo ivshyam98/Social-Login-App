@@ -1,0 +1,7 @@
+{
+  "name": "loginapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

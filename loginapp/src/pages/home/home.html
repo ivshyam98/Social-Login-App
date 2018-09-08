@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    Social Network
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<p>Sign In with Email and password</p>
+  <div padding>
+    <button ion-button (click)="SignIn()">Sign In</button>
+  </div>
+  <div padding>
+    <button ion-button (click)="register()">Register</button>
+  </div>
+
+  <div padding>
+      <button ion-button (click)="SignInWithFacebook()" *ngIf="!facebook.fbloggedin"><ion-icon name="logo-facebook"></ion-icon>&nbsp;Login Facebook</button>
+    </div>
+ 
+    <ion-card *ngIf="facebook.fbloggedin">
+        <img src="{{facebook.img}}"/>
+        <ion-card-content>
+          <ion-card-title>
+           {{facebook.name}}
+            </ion-card-title>
+          <p>
+           {{facebook.email}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+    <div padding>
+      <button ion-button (click)="SignOutFb()" *ngIf="facebook.fbloggedin">LogOut Facebook</button>
+    </div>
+  
+    <div padding>
+        <button ion-button (click)="SignInWithGoogle()" *ngIf="!google.googleloggedin">  <ion-icon name="logo-google"></ion-icon>&nbsp; SignIn Google</button>
+      </div>
+   
+      <ion-card *ngIf="google.googleloggedin">
+          <img src="{{google.img}}"/>
+          <ion-card-content>
+            <ion-card-title>
+             {{google.name}}
+              </ion-card-title>
+            <p>
+             {{google.email}}
+            </p>
+          </ion-card-content>
+        </ion-card>
+      <div padding>
+        <button ion-button (click)="SignOutGoogle()" *ngIf="google.googleloggedin">SignOut Google</button>
+      </div>
+    
+</ion-content>
