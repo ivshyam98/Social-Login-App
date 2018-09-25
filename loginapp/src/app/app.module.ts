@@ -14,12 +14,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { LoggedinPage } from '../pages/loggedin/loggedin';
 export const firebaseAuth = {
-  apiKey: "AIzaSyDzIY41WHrfb8VsVPpdk6zfbr2YpRvexQo",
-  authDomain: "loginapp-88c55.firebaseapp.com",
-  databaseURL: "https://loginapp-88c55.firebaseio.com",
-  projectId: "loginapp-88c55",
-  storageBucket: "",
-  messagingSenderId: "578138220049"
+your firebase credentials
 };
 @NgModule({
   declarations: [
